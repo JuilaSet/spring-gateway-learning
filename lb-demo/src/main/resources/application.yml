@@ -14,4 +14,4 @@ spring:
       port: 8500
       discovery:
         service-name: ${spring.application.name}
-        register: true
+        register: false

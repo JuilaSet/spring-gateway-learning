@@ -16,7 +16,7 @@ class LbDemoApplication {
 
 	@Bean
 	fun webClientBuilder(filter: ReactorLoadBalancerExchangeFilterFunction): WebClient.Builder {
-		val baseUri = "http://demo-client/"
+		val baseUri = "http://fun-provider"
 		return WebClient.builder().filter(filter).baseUrl(baseUri)
 	}
 

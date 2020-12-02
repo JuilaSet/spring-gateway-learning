@@ -18,6 +18,11 @@ class FunProvider8083Application {
 	fun info(): ()-> String {
 		return { "${serverName}:${serverPort}" }
 	}
+
+	@Bean
+	fun msg(): ()-> String {
+		return { "MSG ${serverName}:${serverPort}" }
+	}
 }
 
 fun main(args: Array<String>) {
