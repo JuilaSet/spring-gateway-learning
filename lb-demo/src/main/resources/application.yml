@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: lb-demo
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    # зЂВс
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        register: true
