@@ -17,13 +17,11 @@
 
     <modules>
         <module>demo2</module>
-        <module>lb-client8080</module>
-
+        <module>lb-demo</module>
         <module>fun-provider8082</module>
         <module>fun-provider8083</module>
-
         <module>gateway8001</module>
-        <module>lb-demo</module>
+        <module>circuit-breaker-demo</module>
     </modules>
 
     <properties>

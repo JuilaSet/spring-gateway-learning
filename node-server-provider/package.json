@@ -1,0 +1,25 @@
+{
+  "name": "node-server-provider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -e ts,tsx --exec ts-node ./src/index.ts",
+    "build": "tsc -build && node ./build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "consul": "^0.39.0",
+    "koa": "^2.13.0",
+    "koa-router": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/consul": "^0.23.34",
+    "@types/koa": "^2.11.6",
+    "@types/koa-router": "^7.4.1",
+    "prettier": "^2.2.1"
+  }
+}
