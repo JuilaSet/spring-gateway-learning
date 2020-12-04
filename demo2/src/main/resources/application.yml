@@ -11,4 +11,9 @@ spring:
       discovery:
         service-name: ${spring.application.name}
         register: false
+logging:
+  level:
+    com:
+      example:
+        demo2: trace
 

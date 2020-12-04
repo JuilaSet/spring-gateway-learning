@@ -20,8 +20,8 @@
         <module>lb-demo</module>
         <module>fun-provider8082</module>
         <module>fun-provider8083</module>
-        <module>gateway8001</module>
-        <module>circuit-breaker-demo</module>
+        <module>gateway8001a</module>
+        <module>circuit-break8002</module>
     </modules>
 
     <properties>

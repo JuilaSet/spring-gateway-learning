@@ -1,0 +1,25 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: gateway8001
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        register: false
+    gateway:
+      # \u5F00\u542F\u52A8\u6001\u8DEF\u7531
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: fun-provider
+          uri: lb://fun-provider
+          predicates:
+            - Path=/**
+
