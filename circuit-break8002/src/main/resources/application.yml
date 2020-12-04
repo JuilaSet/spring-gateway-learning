@@ -1,2 +1,24 @@
 server:
   port: 8002
+
+spring:
+  application:
+    name: CircuitBreak8002
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        register: true
+        hostname: localhost
+    circuitbreaker:
+      resilience4j:
+        enabled: false
+        instances:
+          # \u901A\u8FC7\u6CE8\u518C\u5668\u83B7\u53D6\u7194\u65AD\u5668\u7684\u5B9E\u4F8B
+          # circuitBreakerRegistry.circuitBreaker("backendA");
+          backendA:
+            baseConfig: default
+            waitDurationInOpenState: 5000
+            failureRateThreshold: 20
