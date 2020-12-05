@@ -12,7 +12,6 @@ spring:
         service-name: ${spring.application.name}
         register: false
     gateway:
-      # \u5F00\u542F\u52A8\u6001\u8DEF\u7531
       discovery:
         locator:
           enabled: true
@@ -22,4 +21,14 @@ spring:
           uri: lb://fun-provider
           predicates:
             - Path=/**
+    circuitbreaker:
+      resilience4j:
+        enabled: false
+        instances:
+          backendA:
+            baseConfig: default
+            waitDurationInOpenState: 5000
+            failureRateThreshold: 20
+
+
 
